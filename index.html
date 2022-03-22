@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prism Online Clothes Shop</title>
+<!-- Meta -->
+<link rel="apple-touch-icon" sizes="180x180" href="./img/meta/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./img/meta/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./img/meta/favicon-16x16.png">
+<link rel="manifest" href="./img/meta/site.webmanifest">
+<!-- Meta -->
+  <link rel="stylesheet" href="vendor/font-awesome-6/css/all.min.css" />
+  <link rel="stylesheet" href="vendor/slick/slick.css">
+  <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+  <link rel="stylesheet" href="vendor/responsive-tab/responsive-tabs.css">
+  <link rel="stylesheet" href="vendor/aos/aos.css">
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <style>
+   .loader{
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+   }
+.progress {
+   width: 134px;
+   height: 25px;
+   border-radius: 22px;
+   color: #2d31fa;
+   border: 2px solid;
+   position: relative;
+}
+
+.progress::before {
+   content: "";
+   position: absolute;
+   margin: 2px;
+   inset: 0 100% 0 0;
+   border-radius: inherit;
+   background: currentColor;
+   animation: progress-pf82op 2s infinite;
+}
+
+@keyframes progress-pf82op {
+   100% {
+      inset: 0;
+   }
+}
+
+  </style>
+</head>
+
+<body class="position-relative">
+  <div class="loader">
+  <div class="progress"></div>
+</div>
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-light" data-aos="fade-down"
+  data-aos-duration="1500" data-aos-offset="0">
+    <div class="container p-0 px-lg-3">
+      <div class="logo-brand d-flex justify-content-center align-items-center ms-3  ms-lg-0">
+        <a class="navbar-brand ms-2 ms-sm-0 me-1" href="#">
+          <img src="img/logo1.svg" class="logo" />
+        </a>
+        <p class="m-0 text-primary h5 fw-bold">Prism</p>
+      </div>
+      <button class="navbar-toggler  me-3 me-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars nav-icon"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item nav-item-bar">
+            <a class="nav-link" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item  nav-item-bar">
+            <a class="nav-link" href="#shop">Shop</a>
+          </li>
+          <li class="nav-item  nav-item-bar">
+            <a class="nav-link" href="#slide" id="navbarDropdown"> Features </a>
+          </li>
+          <li class="nav-item nav-item-bar">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item nav-item-bar">
+            <a class="nav-link" href="#footer">
+              Contact Us
+            </a>
+          </li>
+          <a href="#" class="switch-mode" >
+            <i class="fa-solid fa-moon" id='darkMode'></i>
+          </a>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <!-- Nav -->
+  <!-- Hero Section -->
+  <section class="container-fluid hero-section position-relative" id="home">
+    <div class="container">
+      <div class="row py-5 align-items-center">
+        <div class="col-sm-12 col-lg-6 col-md-9">
+          <div class="mt-5" data-aos="fade-right"
+          data-aos-duration="1200">
+            <h1 class="hero-title">All Your Style</h1>
+            <h3 class="fw-bolder text-primary h1">Are Here</h3>
+            <p class="hero-title-text my-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              recusandae at vitae pque soluta.
+            </p>
+
+            <div class="hero-btn-container d-flex align-items-center flex-column flex-sm-row gap-5 gap-sm-2 gap-lg-3">
+              <button class="btn hero-button btn-primary my-sm-3">
+                Explore Now
+              </button>
+              <button class="btn hero-button">
+                <span class="d-flex align-items-center justify-content-center fw-bold">
+                  <i class="fa-solid fa-play me-3 shadow"></i>Watch a
+                  Video</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-lg-6 col-md-3">
+          <div class="cloth-container d-flex flex-md-row flex-column mt-5" data-aos="fade-left"
+          data-aos-duration="1700">
+            <img src="img/Blue_Front_Sweater_Mockup_ccexpress.png" class="cloth-img m-auto" />
+          </div>
+        </div>
+      </div>
+      <div class="row" data-aos="fade-up"  data-aos-offset="0" data-aos-duration="1600">
+        <div class="container px-4">
+          <form class="hero-form shadow row gap-3 justify-content-sm-between align-items-center mb-4 mt-md-4" >
+            <div class="col-sm-5 col-lg-2  hero-form-content">
+              <label for="inputState" class="form-label fw-bold">Location</label>
+              <select id="inputState" class="form-select">
+                <option selected>United State</option>
+                <option>United Kingdom</option>
+              </select>
+            </div>
+            <div class="col-sm-5 col-lg-2 hero-form-content">
+              <label for="inputState" class="form-label fw-bold">Date</label>
+              <select id="inputState" class="form-select">
+                <option selected>14-12-22</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-sm-5 col-lg-2 hero-form-content">
+              <label for="inputState" class="form-label fw-bold">Year</label>
+              <select id="inputState" class="form-select">
+                <option selected>793AD</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-sm-5 col-lg-2 hero-form-content">
+              <label for="inputState" class="form-label fw-bold">Type</label>
+              <select id="inputState" class="form-select">
+                <option selected>Weapon</option>
+                <option>Free Style</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="down shadow"><i class="fa-solid fa-computer-mouse"></i></a>
+    <a href="#home" class="top shadow"><i class="fa-solid fa-angle-up"></i></a>
+  </section>
+  <!-- Hero Section -->
+  <!-- Shop Section -->
+  <section class="container-fluid shop-container mt-5" id="shop">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="shop-header gap-3 d-flex flex-column flex-lg-row align-items-center justify-content-between" data-aos="fade-down"
+          data-aos-duration="1000">
+            <h1 class="fw-bold">Our Best <span class="text-primary">Products</span>
+            </h1>
+            <button class="btn btn-primary shop-btn">See All Our Products
+              <!-- <i class="fa-solid fa-arrow-right-long ms-2"></i></button> -->
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5" data-aos="fade-up"
+      data-aos-duration="1200">
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card my-3 shadow" data-aos="fade-up" data-aos-duration="1200">
+            <img src="./img/shop-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body gap-3 d-flex justify-content-between align-items-start">
+              <div class="card-content my-3">
+                <h5 class="card-title fw-bold">Smart T-Shirt</h5>
+                <h4 class="card-text fw-bold">40 <sub class="text-primary dollar">$</sub> </h4>
+                <p class="black-text text-decoration-line-through d-inline-block float-end">100 $ </p>
+              </div>
+              <a href="#" class="btn btn-primary my-3">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card my-3 shadow" data-aos="fade-up" data-aos-duration="1400">
+            <img src="./img/shop-5.jpg" class="card-img-top" alt="...">
+            <div class="card-body gap-3 d-flex justify-content-between align-items-start">
+              <div class="card-content my-3">
+                <h5 class="card-title fw-bold">Smart T-Shirt</h5>
+                <h4 class="card-text fw-bold">40 <sub class="text-primary dollar">$</sub> </h4>
+                <p class="black-text text-decoration-line-through d-inline-block float-end">100 $ </p>
+              </div>
+              <a href="#" class="btn btn-primary my-3">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card my-3 shadow" data-aos="fade-up" data-aos-duration="1600">
+            <img src="./img/shop-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body gap-3 d-flex justify-content-between align-items-start">
+              <div class="card-content my-3">
+                <h5 class="card-title fw-bold">Smart T-Shirt</h5>
+                <h4 class="card-text fw-bold">40 <sub class="text-primary dollar">$</sub> </h4>
+                <p class="black-text text-decoration-line-through d-inline-block float-end">100 $ </p>
+              </div>
+              <a href="#" class="btn btn-primary my-3">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="card my-3 shadow" data-aos="fade-up" data-aos-duration="1800">
+            <img src="./img/shop-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body gap-3 d-flex justify-content-between align-items-start">
+              <div class="card-content my-3">
+                <h5 class="card-title fw-bold">Smart T-Shirt</h5>
+                <h4 class="card-text fw-bold">40 <sub class="text-primary dollar">$</sub> </h4>
+                <p class="black-text text-decoration-line-through d-inline-block float-end">100 $ </p>
+              </div>
+              <a href="#" class="btn btn-primary my-3">Buy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--  Shop Section -->
+  <!-- Slide -->
+  <section class="container-fluid mt-5  slide-container" id="slide">
+    <div class="container p-lg-0">
+      <div class="row mt-5" data-aos="fade-down"
+      data-aos-duration="1200">
+        <h1 class="fw-bold text-center">Looking For <span class="text-primary"> Favourite T-Shirt</span>?</h1>
+        <div id="responsiveTabs" data-aos="zoom-in"
+        data-aos-duration="1300">
+          <ul class="nav nav-pills my-5  justify-content-center">
+            <div class="tab-pill">
+              <li class="nav-item tab-item-1">
+                <a class="nav-link active-tab" aria-current="page" href="#tab-1">T-Shirt</a>
+              </li>
+              <li class="nav-item tab-item-1">
+                <a class="nav-link" href="#tab-2">Hoddie</a>
+              </li>
+              <li class="nav-item tab-item-1">
+                <a class="nav-link" href="#tab-3">Women</a>
+              </li>
+              <li class="nav-item tab-item-1">
+                <a class="nav-link" href="#tab-4">Men</a>
+              </li>
+            </div>
+          </ul>
+
+          <div id="tab-1">
+            <div class="row gap-5 gap-md-3 align-items-center">
+              <div class="col-12 col-md-6">
+                <img src="img/shop-9.jpg" class="shop-img w-100">
+              </div>
+              <div class="col-12 col-md-5">
+                <h1 class="fw-bold hero-title">Just <br><span class="text-primary"> Grab One</span></h1>
+                <p class="black-text my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem distinctio
+                  unde commodi error eaque aliquam</p>
+                <button class="btn btn-primary text-uppercase">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div id="tab-2">
+            <div class="row gap-5 gap-md-3 align-items-center">
+              <div class="col-12 col-md-6">
+                <img src="img/shop-4.jpg" class="shop-img w-100">
+              </div>
+              <div class="col-12 col-md-5">
+                <h1 class="fw-bold hero-title">Don't <br><span class="text-primary"> Hestitates </span></h1>
+                <p class="black-text my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem distinctio
+                  unde commodi error eaque aliquam</p>
+                <button class="btn btn-primary text-uppercase">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div id="tab-3">
+            <div class="row gap-5 gap-md-3 align-items-center">
+              <div class="col-12 col-md-6">
+                <img src="img/shop-2.jpg" class="shop-img w-100">
+              </div>
+              <div class="col-12 col-md-5">
+                <h1 class="fw-bold hero-title">Wow <br><span class="text-primary"> So Cute</span></h1>
+                <p class="black-text my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem distinctio
+                  unde commodi error eaque aliquam</p>
+                <button class="btn btn-primary text-uppercase">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div id="tab-4">
+            <div class="row gap-5 gap-md-3 align-items-center">
+              <div class="col-12 col-md-6">
+                <img src="img/shop-3.jpg" class="shop-img w-100">
+              </div>
+              <div class="col-12 col-md-5">
+                <h1 class="fw-bold hero-title">Why <br> <span class="text-primary"> Choose Us</span></h1>
+                <p class="black-text my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem distinctio
+                  unde commodi error eaque aliquam</p>
+                <button class="btn btn-primary text-uppercase">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Slide -->
+  <!-- Feature  -->
+  <section class="container-fluid mt-5 feature-container" id="feature">
+    <div class="container p-lg-0">
+      <div class="row">
+        <div
+          class="feature-head d-flex flex-column flex-lg-row align-items-lg-center align-items-start justify-content-between gap-5 px-lg-4" data-aos="fade-right"
+          data-aos-duration="1200">
+          <h1 class="fw-bold">Trending <span class="text-primary">Outfit</span> Of The Day</h1>
+          <div
+            class="feature-content d-flex justify-content-lg-end justify-content-between align-items-center gap-3 gap-lg-2" data-aos="fade-left"
+            data-aos-duration="1500">
+            <p class="px-lg-3 fw-bold w-50 m-0 flex-grow-1 flex-lg-grow-0">The e-commerce site has a eye catching design
+              and is
+              perfect for people who want to
+              buy different products,but don't have time for shopping.</p>
+            <button class="btn btn-primary">Explore</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row px-3 py-3 mt-5 slick-items" data-aos="zoom-out-up"
+      data-aos-duration="1700">
+
+        <!-- 3 -->
+        <div class="col-12 col-lg-4">
+          <div class="card  features-card shadow mx-3 text-center">
+            <div class="card-body feature-card p-5">
+              <img src="img/badge.png" class="feature-icon my-5">
+              <h2 class="card-title fw-bold my-2">Years Experience</h2>
+              <h5 class="card-text my-3 fw-bold black-text">Fashion Yourself As a Payfast Application User</h5>
+              <p class="text-primary">See More</p>
+              <a href="#" class="btn btn-primary border-0 mt-5">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card features-card shadow mx-3 text-center">
+            <div class="card-body feature-card p-5">
+              <img src="img/quality-control.png" class="feature-icon my-5">
+              <h2 class="card-title fw-bold my-2">Achievement</h2>
+              <h5 class="card-text my-3 fw-bold black-text">Create a new fashion for you to use anytime and anywhere
+              </h5>
+              <p class="text-primary">See More</p>
+              <a href="#" class="btn btn-primary border-0 mt-5">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card features-card shadow mx-3 text-center">
+            <div class="card-body feature-card p-5">
+              <img src="img/document.png" class="feature-icon my-5">
+              <h2 class="card-title fw-bold my-2">Positive Review</h2>
+              <h5 class="card-text my-3 fw-bold black-text">You can use T-shirt in peace and in all its facilities
+              </h5>
+              <p class="text-primary">See More</p>
+              <a href="#" class="btn btn-primary border-0 mt-5">See More</a>
+            </div>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="col-12 col-lg-4">
+          <div class="card  features-card shadow mx-3 text-center">
+            <div class="card-body feature-card p-5">
+              <img src="img/badge.png" class="feature-icon my-5">
+              <h2 class="card-title fw-bold my-2">Years Experience</h2>
+              <h5 class="card-text my-3 fw-bold black-text">Fashion Yourself As a Payfast Application User</h5>
+              <p class="text-primary">See More</p>
+              <a href="#" class="btn btn-primary border-0 mt-5">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card features-card shadow mx-3 text-center">
+            <div class="card-body feature-card p-5">
+              <img src="img/quality-control.png" class="feature-icon my-5">
+              <h2 class="card-title fw-bold my-2">Achievement</h2>
+              <h5 class="card-text my-3 fw-bold black-text">Create a new fashion for you to use anytime and anywhere
+              </h5>
+              <p class="text-primary">See More</p>
+              <a href="#" class="btn btn-primary border-0 mt-5">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card features-card shadow mx-3 text-center">
+            <div class="card-body feature-card p-5">
+              <img src="img/document.png" class="feature-icon my-5">
+              <h2 class="card-title fw-bold my-2">Positive Review</h2>
+              <h5 class="card-text my-3 fw-bold black-text">You can use T-shirt in peace and in all its facilities
+              </h5>
+              <p class="text-primary">See More</p>
+              <a href="#" class="btn btn-primary border-0 mt-5">See More</a>
+            </div>
+          </div>
+        </div>
+        <!-- 9 -->
+        <div class="col-12 col-lg-4">
+          <div class="card  features-card shadow mx-3 text-center">
+            <div class="card-body feature-card p-5">
+              <img src="img/badge.png" class="feature-icon my-5">
+              <h2 class="card-title fw-bold my-2">Years Experience</h2>
+              <h5 class="card-text my-3 fw-bold black-text">Fashion Yourself As a Payfast Application User</h5>
+              <p class="text-primary">See More</p>
+              <a href="#" class="btn btn-primary border-0 mt-5">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card features-card shadow mx-3 text-center">
+            <div class="card-body feature-card p-5">
+              <img src="img/quality-control.png" class="feature-icon my-5">
+              <h2 class="card-title fw-bold my-2">Achievement</h2>
+              <h5 class="card-text my-3 fw-bold black-text">Create a new fashion for you to use anytime and anywhere
+              </h5>
+              <p class="text-primary">See More</p>
+              <a href="#" class="btn btn-primary border-0 mt-5">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card features-card shadow mx-3 text-center">
+            <div class="card-body feature-card p-5">
+              <img src="img/document.png" class="feature-icon my-5">
+              <h2 class="card-title fw-bold my-2">Positive Review</h2>
+              <h5 class="card-text my-3 fw-bold black-text">You can use T-shirt in peace and in all its facilities
+              </h5>
+              <p class="text-primary">See More</p>
+              <a href="#" class="btn btn-primary border-0 mt-5">See More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row mt-5">
+        <div class="container p-lg-0 my-5">
+          <div class="row p-5 mx-1 mx-lg-4  count rounded justify-content-center align-items-center gap-lg-0 gap-4 shadow"  data-aos="flip-up"
+          data-aos-duration="1400">
+            <div class="col-12 col-lg-3 border-end border-primary">
+              <div class="text-center counter">
+                <h3 class="text-primary fw-bold mb-3">36+</h3>
+                <p>User Trust</p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3 border-end border-primary">
+              <div class="text-center counter">
+                <h3 class="text-primary fw-bold mb-3">42K+</h3>
+                <p>Brand Visions</p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-3">
+              <div class="text-center counter">
+                <h3 class="text-primary fw-bold mb-3">8K+</h3>
+                <p>Achievement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Feature  -->
+
+
+  <!-- Pricing  -->
+  <section class="container-fluid mt-5 pricing-container" id="pricing">
+    <div class="container p-lg-0">
+      <div class="row mt-5" data-aos="fade-down"
+      data-aos-duration="1400">
+        <h1 class="fw-bold text-center">Have Any <span class="text-primary">Questions</span> ?</h1>
+        <div id="responsiveTabsPricing"  data-aos="zoom-out-down"
+        data-aos-duration="1600">
+          <ul class="nav nav-pills my-5  justify-content-center">
+            <div class="tab-pill">
+              <li class="nav-item tab-item-2">
+                <a class="nav-link active-tab text-uppercase" aria-current="page" href="#tab-5">payments</a>
+              </li>
+              <li class="nav-item tab-item-2">
+                <a class="nav-link text-uppercase" href="#tab-6">Refunds</a>
+              </li>
+              <li class="nav-item tab-item-2">
+                <a class="nav-link text-uppercase" href="#tab-7">Pricing</a>
+              </li>
+              <li class="nav-item tab-item-2">
+                <a class="nav-link text-uppercase" href="#tab-8">Shipping</a>
+              </li>
+
+            </div>
+          </ul>
+
+          <div id="tab-5">
+            <div class="row gap-5 gap-md-3 align-items-center flex-md-nowrap">
+              <div class="col-12 col-md-6">
+                <div class="card py-3 px-4 price-card shadow position-relative">
+                  <p class="check-float">✓</p>
+                  <div class="card-body">
+                    <h4 class="card-title  fw-bolder my-3">Personal</h4>
+                    <h2 class="card-subtitle text-secondary my-4 fw-bolder">$12 <sub class="black-text">/month</sub>
+                    </h2>
+                    <ul class="my-5 card-list-item">
+                      <li><i class="fa-solid fa-circle-check"></i>Unlock Special Features</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Cloud Service</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Unlimited Saved</li>
+                      <li><i class="fa-solid fa-circle-check"></i>All Type of File</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Update Support</li>
+                      <li><i class="fa-solid fa-circle-check"></i>For 2 Devices</li>
+                    </ul>
+                    <button class="btn btn-secondary w-100">Get Started</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card py-3 px-4 price-card shadow position-relative">
+                  <p class="check-float">✓</p>
+                  <div class="card-body">
+                    <h4 class="card-title  fw-bolder my-3">Team</h4>
+                    <h2 class="card-subtitle text-secondary my-4 fw-bolder">$48 <sub class="black-text">/month</sub>
+                    </h2>
+                    <ul class="my-5 card-list-item">
+                      <li><i class="fa-solid fa-circle-check"></i>Unlock Special Features</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Cloud Service</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Unlimited Saved</li>
+                      <li><i class="fa-solid fa-circle-check"></i>All Type of File</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Update Support</li>
+                      <li><i class="fa-solid fa-circle-check"></i>For 8 Devices</li>
+                    </ul>
+                    <button class="btn btn-secondary w-100">Get Started</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-6">
+            <div class="row gap-5 gap-md-3 align-items-center flex-md-nowrap">
+              <div class="col-12 col-md-6">
+                <div class="card py-3 px-4 price-card shadow position-relative">
+                  <p class="check-float">✓</p>
+                  <div class="card-body">
+                    <h4 class="card-title  fw-bolder my-3">Personal</h4>
+                    <h2 class="card-subtitle text-secondary my-4 fw-bolder">$12 <sub class="black-text">/month</sub>
+                    </h2>
+                    <ul class="my-5 card-list-item">
+                      <li><i class="fa-solid fa-circle-check"></i>Unlock Special Features</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Cloud Service</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Unlimited Saved</li>
+                      <li><i class="fa-solid fa-circle-check"></i>All Type of File</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Update Support</li>
+                      <li><i class="fa-solid fa-circle-check"></i>For 2 Devices</li>
+                    </ul>
+                    <button class="btn btn-secondary w-100">Get Started</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card py-3 px-4 price-card shadow position-relative">
+                  <p class="check-float">✓</p>
+                  <div class="card-body">
+                    <h4 class="card-title  fw-bolder my-3">Team</h4>
+                    <h2 class="card-subtitle text-secondary my-4 fw-bolder">$48 <sub class="black-text">/month</sub>
+                    </h2>
+                    <ul class="my-5 card-list-item">
+                      <li><i class="fa-solid fa-circle-check"></i>Unlock Special Features</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Cloud Service</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Unlimited Saved</li>
+                      <li><i class="fa-solid fa-circle-check"></i>All Type of File</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Update Support</li>
+                      <li><i class="fa-solid fa-circle-check"></i>For 8 Devices</li>
+                    </ul>
+                    <button class="btn btn-secondary w-100">Get Started</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-7">
+            <div class="row gap-5 gap-md-3 align-items-center flex-md-nowrap">
+              <div class="col-12 col-md-6">
+                <div class="card py-3 px-4 price-card shadow position-relative">
+                  <p class="check-float">✓</p>
+                  <div class="card-body">
+                    <h4 class="card-title  fw-bolder my-3">Personal</h4>
+                    <h2 class="card-subtitle text-secondary my-4 fw-bolder">$12 <sub class="black-text">/month</sub>
+                    </h2>
+                    <ul class="my-5 card-list-item">
+                      <li><i class="fa-solid fa-circle-check"></i>Unlock Special Features</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Cloud Service</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Unlimited Saved</li>
+                      <li><i class="fa-solid fa-circle-check"></i>All Type of File</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Update Support</li>
+                      <li><i class="fa-solid fa-circle-check"></i>For 2 Devices</li>
+                    </ul>
+                    <button class="btn btn-secondary w-100">Get Started</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card py-3 px-4 price-card shadow position-relative">
+                  <p class="check-float">✓</p>
+                  <div class="card-body">
+                    <h4 class="card-title  fw-bolder my-3">Team</h4>
+                    <h2 class="card-subtitle text-secondary my-4 fw-bolder">$48 <sub class="black-text">/month</sub>
+                    </h2>
+                    <ul class="my-5 card-list-item">
+                      <li><i class="fa-solid fa-circle-check"></i>Unlock Special Features</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Cloud Service</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Unlimited Saved</li>
+                      <li><i class="fa-solid fa-circle-check"></i>All Type of File</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Update Support</li>
+                      <li><i class="fa-solid fa-circle-check"></i>For 8 Devices</li>
+                    </ul>
+                    <button class="btn btn-secondary w-100">Get Started</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-8">
+            <div class="row gap-5 gap-md-3 align-items-center flex-md-nowrap">
+              <div class="col-12 col-md-6">
+                <div class="card py-3 px-4 price-card shadow position-relative">
+                  <p class="check-float">✓</p>
+                  <div class="card-body">
+                    <h4 class="card-title  fw-bolder my-3">Personal</h4>
+                    <h2 class="card-subtitle text-secondary my-4 fw-bolder">$12 <sub class="black-text">/month</sub>
+                    </h2>
+                    <ul class="my-5 card-list-item">
+                      <li><i class="fa-solid fa-circle-check"></i>Unlock Special Features</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Cloud Service</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Unlimited Saved</li>
+                      <li><i class="fa-solid fa-circle-check"></i>All Type of File</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Update Support</li>
+                      <li><i class="fa-solid fa-circle-check"></i>For 2 Devices</li>
+                    </ul>
+                    <button class="btn btn-secondary w-100">Get Started</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card py-3 px-4 price-card shadow position-relative">
+                  <p class="check-float">✓</p>
+                  <div class="card-body">
+                    <h4 class="card-title  fw-bolder my-3">Team</h4>
+                    <h2 class="card-subtitle text-secondary my-4 fw-bolder">$48 <sub class="black-text">/month</sub>
+                    </h2>
+                    <ul class="my-5 card-list-item">
+                      <li><i class="fa-solid fa-circle-check"></i>Unlock Special Features</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Cloud Service</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Unlimited Saved</li>
+                      <li><i class="fa-solid fa-circle-check"></i>All Type of File</li>
+                      <li><i class="fa-solid fa-circle-check"></i>Update Support</li>
+                      <li><i class="fa-solid fa-circle-check"></i>For 8 Devices</li>
+                    </ul>
+                    <button class="btn btn-secondary w-100">Get Started</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Pricing -->
+  <!-- Footer -->
+  <section class="container-fluid footer-container mt-5" id="footer">
+    <div class="container py-4">
+      <div class="row justify-content-center align-items-lg-start mt-xl-5">
+        <div class="col-12 col-lg-3  me-lg-5  mb-5"  data-aos="fade-right"
+        data-aos-duration="1000">
+          <div class="d-flex  align-items-center">
+            <img src="./img/logo1.svg" class="logo me-3">
+            <p class="m-0 fw-bold">Prism</p>
+          </div>
+          <p class="my-4">Looking For a e-commerce Website?We Offer turn key ecommerce website with the latest
+            technology.Get your
+            online store today!</p>
+          <div class="socail-group text-center text-lg-start">
+            <a href="#"  class="social-icon"> <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon"> <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2 mb-2" data-aos="fade-right"
+        data-aos-duration="1300">
+          <h5 class="text-light mb-4">Home</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Discover</li>
+            <li class="mb-2">Explore</li>
+            <li class="mb-2">Join</li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-2" data-aos="fade-down"
+        data-aos-duration="1600">
+          <h5 class="text-light mb-4">Company</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Comporation</li>
+            <li class="mb-2">Fashions</li>
+            <li class="mb-2">About</li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-2" data-aos="fade-left"
+        data-aos-duration="1300">
+          <h5 class="text-light mb-4">Features</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Shop</li>
+            <li class="mb-2">Cart</li>
+            <li class="mb-2">Notification</li>
+            <li class="mb-2">Sale</li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-2" data-aos="fade-left"
+        data-aos-duration="1000">
+          <h5 class="text-light mb-4">Contact Us</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">Privacy & Privacy</li>
+            <li class="mb-2">+09123456789</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="row bg-primary p-3" data-aos="zoom-out"
+    data-aos-duration="1000">
+      <p class="copy-right-text text-light fw-light text-center mb-0"></p>
+    </div>
+  </section>
+  <!-- Footer -->
+
+  <script src="vendor/jquery-3.3.1.min.js"></script>
+  <script src="vendor/way_point/jquery.waypoints.min.js"></script>
+  <script src="vendor/slick/slick.min.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/responsive-tab/jquery.responsiveTabs.min.js"></script>
+  <script src="vendor/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <script src="vendor/font-awesome-6/js/all.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>$(window).on("load", function () {
+    $(".loader").fadeOut(700);
+    $(this).remove();
+  });</script>
+</body>
+
+</html>
