@@ -399,7 +399,7 @@ body.dark .features-card:hover .card-title,
   top: 8%;
   right: 20%;
   font-size: 1.3rem;
-  color: var(--text-light);
+  color: transparent !important;
 }
 .price-card:hover .text-secondary {
   color: var(--primary) !important;
