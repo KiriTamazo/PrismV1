@@ -123,7 +123,7 @@ select {
   width: 100%;
   height: 100%;
   filter: opacity(80%);
-  /* background-position: 50% 0; */
+  z-index: -999;
   background-size: cover;
 }
 .hero-title-text {
@@ -453,7 +453,7 @@ body.dark .features-card:hover .card-title,
   margin: auto;
 }
 .price-card:hover {
-  box-shadow: 0 0rem 1rem rgb(0 0 0 / 15%) !important;
+  box-shadow: 0 0rem 1rem var(--shadow) !important;
   transform: translate(0, -10px) !important;
 }
 .price-card:hover .fa-circle-check {
@@ -616,6 +616,9 @@ body.dark .features-card:hover .card-title,
   .cloth-img {
     width: 200px;
     height: 300px;
+  }
+  .fa-play {
+    margin-left: -45px;
   }
 }
 @-webkit-keyframes bounce {
